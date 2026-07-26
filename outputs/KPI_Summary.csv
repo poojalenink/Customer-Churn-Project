@@ -1,0 +1,12 @@
+KPI,Value
+Total Customers,10000
+Churned Customers,2037
+Retained Customers,7963
+Overall Churn Rate,20.37%
+Average Credit Score,650.53
+Average Balance,"$76,485.89"
+Average Salary,"$100,090.24"
+Active Member Rate,51.51%
+Credit Card Ownership Rate,70.55%
+Average Products,1.53
+High Value Customer Churn,25.23%
