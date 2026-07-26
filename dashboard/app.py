@@ -3,35 +3,18 @@ import pandas as pd
 import plotly.express as px
 from pathlib import Path
 import streamlit as st
-import pandas as pd
 from pathlib import Path
-import os
-
+import pandas as pd
+import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+CSV_FILE = BASE_DIR / "outputs" / "cleaned_customer_churn.csv"
 
-st.write("Current Working Directory:", os.getcwd())
-st.write("BASE_DIR:", BASE_DIR)
-st.write("BASE_DIR exists:", BASE_DIR.exists())
-
-st.write("Folders in BASE_DIR:")
-st.write(os.listdir(BASE_DIR))
-
-OUTPUTS = BASE_DIR / "outputs"
-st.write("Outputs exists:", OUTPUTS.exists())
-
-if OUTPUTS.exists():
-    st.write("Files in outputs:")
-    st.write(os.listdir(OUTPUTS))
-
-csv_path = OUTPUTS / "cleaned_customer_churn.csv"
-st.write("CSV exists:", csv_path.exists())
-st.write("CSV path:", csv_path)
-
-if not csv_path.exists():
+if not CSV_FILE.exists():
+    st.error(f"Dataset not found: {CSV_FILE}")
     st.stop()
 
-df = pd.read_csv(csv_path)
+df = pd.read_csv(CSV_FILE)
 # -------------------------------------------------
 # PAGE CONFIGURATION
 # -------------------------------------------------
