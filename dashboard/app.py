@@ -77,7 +77,7 @@ European Banking Customer Churn Dashboard
 try:
     df = pd.read_csv("../outputs/cleaned_customer_churn.csv")
 except:
-    df = pd.read_csv("cleaned_customer_churn.csv")
+    df = pd.read_csv("../outputs/cleaned_customer_churn.csv")
 
 # -------------------------------------------------
 # CREATE MISSING COLUMNS
