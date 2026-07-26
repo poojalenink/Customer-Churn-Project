@@ -1,7 +1,22 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
+import streamlit as st
+import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+csv_path = BASE_DIR / "outputs" / "cleaned_customer_churn.csv"
+
+st.write("Current file:", __file__)
+st.write("Looking for:", csv_path)
+st.write("Exists:", csv_path.exists())
+
+if not csv_path.exists():
+    st.error(f"CSV file not found: {csv_path}")
+    st.stop()
+
+df = pd.read_csv(csv_path)
 # -------------------------------------------------
 # PAGE CONFIGURATION
 # -------------------------------------------------
