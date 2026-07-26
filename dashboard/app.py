@@ -84,15 +84,6 @@ European Banking Customer Churn Dashboard
 <hr>
 """, unsafe_allow_html=True)
 
-# -------------------------------------------------
-# LOAD DATASET
-# -------------------------------------------------
-try:
-    df = pd.read_csv("../outputs/cleaned_customer_churn.csv")
-except:
-    df = pd.read_csv("../outputs/cleaned_customer_churn.csv")
-
-# -------------------------------------------------
 # CREATE MISSING COLUMNS
 # -------------------------------------------------
 
